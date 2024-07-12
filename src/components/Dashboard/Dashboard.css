@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap");
+
+/* DASHBOARD CSS */
+.dashboard {
+  padding: 20px;
+  height: 100vh;
+  width: 80%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.logout-head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid #cacaca;
+  margin-bottom: 15px;
+  padding: 7px;
+}
+
+.logout-btn {
+  height: 40px;
+  width: 100px;
+  padding: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.dashboard h1 {
+  color: #454749;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36.46px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  width: 15%;
+}
+
+.tabel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  width: 90%;
+  margin-left: 7px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border: 1px solid #ff7f50;
+}
+
+th,
+td {
+  border: 1px solid #ff7f50;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  color: #ea550f;
+}
+
+.sub-header th {
+  background-color: #fe7f44;
+  color: white;
+}
+
+td table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td table th,
+td table td {
+  border: 1px solid #ddd;
+}
+
+td table th {
+  background-color: #efeaea !important;
+  color: #f74f06; /*#ea550f;*/
+}
+
+.sidebar-control {
+  border-radius: 0px;
+}
+
+.result-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SIDEBAR CSS */
+
+.Sidebar {
+  width: 20%; 
+  height: 100vh;
+  background-color: #fe7f44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); 
+  position: fixed; 
+  left: 0; 
+  z-index: 999; 
+}
+
+.sidebar_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding: 5px 0px;
+}
+
+.sidebar-logo {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo h1 {
+  font-size: 25px;
+  color: white;
+  margin-top: 10px;
+  font-family: "Tiro Devanagari Marathi", serif;
+}
+
+.logo img {
+  height: 70px;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 25px;
+  color: white;
+  margin-top: 10px;
+  font-family: "Tiro Devanagari Marathi", serif;
+}
+
+.year {
+  background-color: #f74f06;
+  display: flex;
+  flex-direction: column;
+}
+
+.year h4 {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  padding: 4px 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  margin-bottom: 0px !important;
+}
+
+.year_input {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+}
+
+label {
+  color: orange;
+  font-family: "Tiro Devanagari Marathi", serif;
+}
+
+input {
+  border: 0.5px solid #a09a9a;
+  padding: 5px;
+  font-family: "Tiro Devanagari Marathi", serif;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+button {
+  font-size: 17px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  font-weight: 400;
+  width: 100%;
+  color: #f74f06;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+
+.toggle-bar {
+  display: none; 
+}
+
+
+.Sidebar.open {
+  transform: translateX(0); 
+}
+
+.toggle-bar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; 
+  cursor: pointer;
+  display: none; 
+}
+
+.toggle_icon{
+  color: #fff !important;
+  font-size: 22px;
+}
+
+
+.toogle_box{
+  width: 30px;
+  height: 30px;
+  background-color: #fe7f44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .Sidebar {
+    width: 50%; 
+  }
+  .sidebar-logo h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .dashboard {
+    width: 100%; 
+    margin-left: 0; 
+  }
+  .dashboard h1{
+    font-size: 18px;
+  }
+  .toggle-bar {
+    display: block; 
+  }
+  .result-box{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Sidebar {
+    width: 40%; 
+  }
+  .sidebar-logo h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .dashboard {
+    width: 100%; 
+    margin-left: 0; 
+  }
+  .dashboard h1{
+    font-size: 18px;
+  }
+  .toggle-bar {
+    display: block; 
+  }
+  .result-box{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Sidebar {
+    width: 30%; 
+  }
+  .sidebar-logo h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .dashboard {
+    width: 100%; 
+    margin-left: 0; 
+  }
+  .dashboard h1{
+    font-size: 18px;
+  }
+  .toggle-bar {
+    display: block; 
+  }
+  .result-box{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .toggle-bar {
+    display: none;
+  }
+  .sidebar-logo h1 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .Sidebar{
+    display: block;
+    left: 20%; 
+    width: 20%;
+  }
+  .dashboard {
+    width: 100%; 
+    margin-left: 20%; 
+  }
+  .dashboard h1{
+    font-size: 20px;
+  }
+  .result-box{
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .toggle-bar {
+    display: none;
+  }
+  .sidebar-logo h1 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .Sidebar{
+    display: block;
+    left: 20%; 
+    width: 20%;
+  }
+  .dashboard {
+    width: 100%; 
+    margin-left: 20%; 
+  }
+  .dashboard h1{
+    font-size: 20px;
+  }
+  .result-box{
+    flex-direction: row;
+  }
+
+}
